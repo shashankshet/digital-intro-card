@@ -21,6 +21,10 @@
             width: 100%;
             max-width: 340px; /* Maximum width for larger screens */
             margin: 0 auto; /* Center align horizontally */
+            position: relative;
+            display: flex; /* Center card content within container */
+            justify-content: center;
+            align-items: center;
         }
         .card-content {
             width: 100%;
@@ -101,8 +105,11 @@
 
         /* Responsive Styles */
         @media (max-width: 480px) {
+            .card {
+                max-width: 90%; /* Allow card to use more of the viewport width */
+            }
             .card-content {
-                max-width: 250; /* Reduce width for small screens */
+                max-width: 100%; /* Ensure card content fits within the container */
             }
             .card-front h2 {
                 font-size: 20px;

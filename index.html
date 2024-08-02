@@ -29,6 +29,7 @@
             position: relative;
             transform-style: preserve-3d;
             transition: transform 0.6s;
+            transform-origin: center; /* Ensure the card flips around the center */
         }
         .card-content.flipped {
             transform: rotateY(180deg);
@@ -45,14 +46,18 @@
             padding: 20px;
             box-shadow: 10px 10px 20px #333333, -10px -10px 20px #333333;
         }
-        .card-front {
-            background: linear-gradient(145deg, #1a1a1a, #000000);
+        .card-front, .card-back {
+            background: #000; /* Default background color */
             color: #FFD700;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            border-radius: 15px;
+        }
+        .card-front {
+            background: linear-gradient(145deg, #1a1a1a, #000000);
         }
         .card-front h2 {
             margin: 0;
@@ -97,7 +102,6 @@
         /* Responsive Styles */
         @media (max-width: 480px) {
             .card-content {
-                width: 100%;
                 max-width: 300px; /* Reduce width for small screens */
             }
             .card-front h2 {

@@ -18,10 +18,14 @@
         }
         .card {
             perspective: 1000px;
+            width: 100%;
+            max-width: 340px; /* Maximum width for larger screens */
+            margin: 0 auto; /* Center align horizontally */
         }
         .card-content {
-            width: 340px;
-            height: 210px;
+            width: 100%;
+            height: auto; /* Adjust height based on content */
+            aspect-ratio: 1.6; /* Maintain a 16:10 aspect ratio */
             position: relative;
             transform-style: preserve-3d;
             transition: transform 0.6s;
@@ -88,6 +92,23 @@
         }
         .social-icons a:hover {
             color: #FFEB3B;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 480px) {
+            .card-content {
+                width: 100%;
+                max-width: 300px; /* Reduce width for small screens */
+            }
+            .card-front h2 {
+                font-size: 20px;
+            }
+            .tap-here {
+                font-size: 12px;
+            }
+            .social-icons a {
+                font-size: 18px;
+            }
         }
     </style>
 </head>

@@ -67,6 +67,10 @@
             font-size: 24px;
             color: #FFD700;
             font-family: 'Great Vibes', cursive;
+            transition: text-shadow 0.3s;
+        }
+        .card-front h2:hover {
+            text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
         }
         .tap-here {
             margin-top: 10px;
@@ -96,10 +100,11 @@
             color: #FFD700;
             text-decoration: none;
             font-size: 20px;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
         .social-icons a:hover {
             color: #FFEB3B;
+            transform: scale(1.2);
         }
 
         /* Responsive Styles */
